@@ -1,0 +1,6 @@
+.DS_Store
+report/
+.idea/
+final_proj.db
+tagged_data/*
+!tagged_data/.gitkeep 

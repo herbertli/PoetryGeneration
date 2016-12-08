@@ -1,0 +1,34 @@
+Herbert Li (hl1785.nyu.edu)
+Natural Language Processing Final Project
+Poetry Generation
+
+Contents:
+data/                               <- corpora used for this project
+report/                             <- final report
+tagged_data/                        <- initially empty folder, but will contain all the corpora in data/ but tagged
+generate_db.py                      <- create a database from tagged data
+generate_random_from_grammar.py     <- generate a random poem for a CFG
+read_data.py                        <- reads individual poems from a collection (used to populate data/)
+tag_data.py                         <- tags poems in data/ (used to populate tagged_data/)
+
+Requirements:
+Python 2.7+
+nltk package
+
+Setup:
+> python tag_data.py suppress=False
+set suppress=True if you don't want to see any warning messages
+
+> python generate_db.py suppress=False test=False
+set suppress=True if you don't want to see any warning messages
+set test=True if you want to test to make sure your database has been populated
+
+Run:
+> python generate_random_from_grammar.py grammar=[grammar file] rhyme=[scheme]
+where [grammar file] is a file containing your grammar (see the provided grammar file for an example)
+and where [scheme] is your desired rhyme scheme, ex. ABAB, AABB, ABCD, etc.
+Note: this command may take a while to complete
+
+By default,
+the grammar contained within the file, "grammar" is used,
+with rhyme scheme "ABAB"
